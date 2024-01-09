@@ -1,0 +1,15 @@
+server:
+  port: 8903
+
+config:
+  profile: profile 내용, egovConfigClient
+  message: massage 내용, egovConfigClient
+  
+Globals:
+  DbType: mysql
+  DriverClassName: com.mysql.jdbc.Driver 
+  Url: jdbc:mysql://127.0.0.2:3306/egovConfigClient
+  UserName: com
+  Password: com0
+
+         

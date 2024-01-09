@@ -1,0 +1,15 @@
+server:
+  port: 8902
+
+config:
+  profile: profile 내용, configClient02-dev.yml 
+  message: massage 내용, configClient02-dev.yml 파일 임포트
+  
+Globals:
+  DbType: mysql
+  DriverClassName: com.mysql.jdbc.Driver 
+  Url: jdbc:mysql://127.0.0.2:3306/configClient02
+  UserName: com
+  Password: com0
+
+         
