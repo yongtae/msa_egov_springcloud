@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  
+spring:
+  application:    name: zuulServer
+
+# zuul route 설정
+# routes 옵션설정으로 자동으로 
+zuul:
+#  ignored-services: '*' # 유레카에서 자동등록된 클라이언트 정보 제거 설정  routes:
+    catalog: # 구분자
+      path: /catalogroute/** # api 게이트웨이 주소
+      serviceId: catalogservice # 유레카 클라이언트 서비스 아이디 셋팅    
+    
+# 유레카 서버+클라이언트 설정
+eureka:
+  instance:
+    non-secure-port: ${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka  # default address 
+      
+# actuator 설정, zuul 게이트웨이에 매핑된 경로, 필터들을 확인할 수 있는 엔드 포인트를 제공한다.
+management:  endpoint:    routes:      enabled:  true
+    filters:      enabled: true
+  endpoints:    web:      exposure:        include: routes, filters
+
+
