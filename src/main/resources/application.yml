@@ -1,0 +1,12 @@
+server:
+  servlet:
+    context-path: /
+  port: 8080
+
+
+# actuator 설정, config client 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ['env','refresh']

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: egovConfClient # config server의 'egovConfClient-dev.yml' 파일명, 'configClient01' 부분 동일
+  profiles:
+    active: dev # config server의 'egovConfClient-dev.yml' 파일명에서 참고, 'dev' 부분 동일
+    
+  cloud:
+    config:
+      uri: http://localhost:8888 # config server url
