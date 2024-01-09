@@ -1,0 +1,6 @@
+# actuator 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ['env','refresh']
